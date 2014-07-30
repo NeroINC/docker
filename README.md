@@ -56,3 +56,6 @@ All Dockerfiles are provided _"as is"_:
 * `neroinc/fedora-golang` - Go runtime and sample web app based on fedora:20
 * `neroinc/fedora-memcached` - Installation of memcached based on fedora:20
 * `neroinc/fedora-node` - Node.js image based on fedora:20
+
+
+Automated builds of these images are available for public consuption at the [Docker Hub](https://registry.hub.docker.com/repos/neroinc/).
