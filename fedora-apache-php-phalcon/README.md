@@ -10,4 +10,4 @@ Build the image:
 Start a container with an interactive shell and port 80 published:
 `docker run -it -p 80:80 neroinc/fedora-apache-php-phalcon /bin/bash`
 
-Invoke `/run.sh` on command line to launch Apache with a simple demo web page.
+Invoke `/bin/httpd-run` on command line to launch Apache with a simple demo web page.
