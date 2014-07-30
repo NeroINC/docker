@@ -2,7 +2,6 @@
 # fedora-golang
 #
 FROM fedora:20
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 # Update distribution
 RUN yum -y update; yum clean all

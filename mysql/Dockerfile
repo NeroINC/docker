@@ -1,5 +1,4 @@
-FROM fedora:20
-MAINTAINER "stoupin" <stoupin@nero.com>
+
 RUN yum -y update; yum clean all
 RUN yum -y install wget; yum clean all
 RUN wget http://dev.mysql.com/get/mysql-community-release-fc20-5.noarch.rpm

@@ -2,7 +2,6 @@
 # fedora-apache-php
 #
 FROM neroinc/fedora-apache
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 # Install PHP and dependencies
 RUN yum -y install php php-common php-cli php-devel php-gd php-mbstring php-mcrypt php-xml php-pear php-pdo php-mysql php-mysqlnd php-pgsql php-pecl-memcache php-pecl-memcached php-pecl-apcu; yum clean all

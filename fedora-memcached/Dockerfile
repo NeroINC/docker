@@ -2,7 +2,6 @@
 # docker-memcached
 #
 FROM  fedora:20
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 # Install memcached
 RUN yum -y update; yum clean all

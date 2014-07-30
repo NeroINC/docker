@@ -1,5 +1,4 @@
 FROM fedora:20
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 ENV container docker
 

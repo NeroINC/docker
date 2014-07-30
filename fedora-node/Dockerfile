@@ -2,7 +2,6 @@
 # fedora-node
 #
 FROM fedora:20
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 # Install nodejs and build tools
 RUN yum -y update; yum clean all

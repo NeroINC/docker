@@ -2,7 +2,6 @@
 # fedora-apache-php
 #
 FROM neroinc/fedora-apache-php
-MAINTAINER "stoupin" <stoupin@nero.com>
 
 # Install phalcon
 RUN yum -y groupinstall "Development Tools"; yum clean all
