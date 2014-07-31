@@ -26,7 +26,7 @@ ADD go-run /bin/go-run
 # Setup simple hello world app
 ADD hello.go /src/hello.go
 RUN mkdir -p /gopath/src; rm -rf /gopath/src/app/; ln -s /src /gopath/src/app
-RUN /bin/go-build
+#RUN /bin/go-build
 
 # ONBUILD ADD . /gopath/src/app/
 # ONBUILD RUN /bin/go-build
