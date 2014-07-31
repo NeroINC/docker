@@ -38,7 +38,7 @@ $ boot2docker ip
 192.168.59.103
 ```
 
-However, the drawback with this solution is that all your source code is stored inside of the VM. If you delete the VM, your sources are gone. Ouch!
+However, the drawback of this solution is that all your source code is stored inside of the VM. If you delete the VM, your sources are gone. Ouch!
 
 
 ## Helper Scripts
@@ -54,7 +54,7 @@ Use at your own risk!
 
 
 ## Dockerfiles
-All Dockerfiles are provided _"as is"_. Automated trusted builds of these images are available for public consuption 
+All Dockerfiles are provided _"as is"_. Automated trusted builds of these images are available for public consumption 
 at the [Docker Hub](https://registry.hub.docker.com/repos/neroinc/).
 
 * `neroinc/fedore-apache` - Plain and simple image with Apache httpd based on fedora:20
