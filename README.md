@@ -64,4 +64,4 @@ at the [Docker Hub](https://registry.hub.docker.com/repos/neroinc/).
 * `neroinc/fedora-golang` - Go runtime and sample web app based on fedora:20
 * `neroinc/fedora-memcached` - Installation of memcached based on fedora:20
 * `neroinc/fedora-node` - Node.js image based on fedora:20
-
+* `neroinc/ubuntu-golang-crosscompile` - Go runtime based on ubuntu:utopic, set up for cross compilation to Linux (i386, AMD64, ARM) and Windows (i386, AMD64).
