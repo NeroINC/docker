@@ -4,7 +4,7 @@
 FROM neroinc/ubuntu-crosscompile
 
 # Install Go
-RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.3.1.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
+RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
 RUN mkdir /gopath
 
 # Download and build Go sources

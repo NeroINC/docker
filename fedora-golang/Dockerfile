@@ -8,7 +8,7 @@ RUN yum -y update; yum clean all
 
 # Install Go
 RUN yum -y groupinstall "Development Tools"; yum clean all
-RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.3.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
+RUN mkdir /goroot && curl https://storage.googleapis.com/golang/go1.4.linux-amd64.tar.gz | tar xvzf - -C /goroot --strip-components=1
 RUN mkdir /gopath
 
 # Install dependencies (such as Mercurial which is required for log4go)
