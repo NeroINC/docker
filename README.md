@@ -13,13 +13,9 @@
 
 ### Access your local source code within Docker
 In order to share a local Windows/Mac folder (the host system) with your Docker setup, follow these steps:
-* Download [Boot2docker with VirtualBox Guest Additions](https://medium.com/boot2docker-lightweight-linux-for-docker/boot2docker-together-with-virtualbox-guest-additions-da1e3ab2465c)
-* Make sure to use the ISO with VirtualBox Guest Additions as provided via the download link above. Place it in your home directory under 
-`~/.boot2docker/boot2docker.iso` (Mac) or `%HOME%/.boot2docker/boot2docker.iso`, replacing the existing file. It's a good idea to do a backup of the original file.
-* Init boot2docker:
-  `boot2docker init`
-* Mount your local folder on your Windows host system into the virtual box. Make sure the name of the share is `home`. The VM will automatically mount it to `/Users`:
-  `VBoxManage sharedfolder add boot2docker-vm -name home -hostpath /path/to/your/sources`
+* Download and install [Boot2Docker](http://boot2docker.io/)
+* Init Boot2Docker: `boot2docker init`
+* Mount your local folder on your Windows host system into the virtual box. Make sure the name of the share is `Users`. The VM will automatically mount it to `/Users`: `VBoxManage sharedfolder add boot2docker-vm -name Users -hostpath /path/to/your/sources` (names other than `Users` are _not_ supported!)
 * Now it's time to startup the VM and connect to it. Type `boot2docker up` to start up the VM, followed by `boot2docker ssh` to login to it.
 * As an alternative to `boot2docker ssh` you can also use any regular SSH tool such as Putty or simply the command line `ssh`.
 
