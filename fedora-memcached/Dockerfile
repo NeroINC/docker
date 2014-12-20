@@ -1,5 +1,5 @@
 #
-# docker-memcached
+# fedora-memcached
 #
 FROM  fedora:20
 
