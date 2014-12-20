@@ -10,7 +10,7 @@ Build the image:
 `docker build --rm -t neroinc/node .`
 
 Start a container with an interactive shell and port 8000 published:
-`docker run -it -p 8000:8000 neroinc/node /bin/bash`
+`docker run -it -p 8000:8000 neroinc/fedora-node /bin/bash`
 
 Run node as usual:
 `node /src/app.js`
