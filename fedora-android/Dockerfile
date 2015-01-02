@@ -73,6 +73,9 @@ ENV PATH $PATH:$ANT_HOME/bin
 ENV PATH $PATH:$MAVEN_HOME/bin
 ENV PATH $PATH:$GRADLE_HOME/bin
 
+# Make sure AVD path exists as otherwise we'll fail to create an SD card
+RUN mkdir -p $ANDROID_AVD_HOME
+
 # Done
 RUN mkdir -p /src
 WORKDIR /src
