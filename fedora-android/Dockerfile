@@ -19,7 +19,8 @@ RUN yum -y upgrade libstdc++; yum clean all
 RUN yum -y install glibc.i686 libstdc++.i686 glibc-devel.i686 zlib-devel.i686 ncurses-devel.i686 libX11-devel.i686 libXrender.i686; yum clean all
 
 # Install Android SDK
-RUN cd /usr/local/ && curl -L -O http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz && \
+RUN cd /usr/local/ && \
+	curl -L -O http://dl.google.com/android/android-sdk_r24.0.2-linux.tgz && \
 	tar xf android-sdk_r24.0.2-linux.tgz && \
 	rm -rf android-sdk_r24.0.2-linux.tgz
 
@@ -53,9 +54,9 @@ RUN cd /usr/local/ && \
 
 # Install Gradle
 RUN cd /usr/local/ && \
-	curl -L -O http://services.gradle.org/distributions/gradle-2.2.1-all.zip && \
-	unzip -o gradle-2.2.1-all.zip && \
-	rm -rf gradle-2.2.1-all.zip
+	curl -L -O http://services.gradle.org/distributions/gradle-2.2.1-bin.zip && \
+	unzip -qo gradle-2.2.1-bin.zip && \
+	rm -rf gradle-2.2.1-bin.zip
 
 # Environment variables
 ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.3.fc20.x86_64
