@@ -73,5 +73,6 @@ ENV PATH $PATH:$MAVEN_HOME/bin
 ENV PATH $PATH:$GRADLE_HOME/bin
 
 # Done
+RUN mkdir -p /src
 WORKDIR /src
 CMD ["/bin/bash"]

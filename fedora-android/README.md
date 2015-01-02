@@ -47,30 +47,29 @@ Executing Unit Tests
 --------------------
 Here's a simple batch file you can use to run unit tests. This will create and run an emulator, installs your APK,
 executed the tests and copies the JUnit test report back into your docker file system.
-```
-#!/bin/bash
 
-# Create AVD
-echo n | android create avd --name test-device --target android-21 --sdcard 8000M --abi default/armeabi-v7a --force
-
-# Start emulator
-emulator64-arm -avd test-device -no-boot-anim -noaudio -no-window -gpu off &
-adb wait-for-device
-
-# Waiting for emulator to fully boot
-echo 'Waiting for emulator to fully boot... (This might take several minutes)'
-adb shell 'while [ ""`getprop dev.bootcomplete` != "1" ] ; do sleep 1; done'
-
-# Run the tests
-adb shell pm list instrumentation
-adb install -rt <path to debug APK>
-adb shell mkdir /storage/sdcard/report_dir
-adb shell am instrument -w -e reportDir /storage/sdcard/report_dir <your package name>/com.zutubi.android.junitreport.JUnitReportTestRunner
-adb pull /storage/sdcard/report_dir/junit-report.xml ./test-reports/junit-report.xml
-
-# Stop the emulator
-adb -s emulator-5554 emu kill
-```
+    #!/bin/bash
+    
+    # Create AVD
+    echo n | android create avd --name test-device --target android-21 --sdcard 8000M --abi default/armeabi-v7a --force
+    
+    # Start emulator
+    emulator64-arm -avd test-device -no-boot-anim -noaudio -no-window -gpu off &
+    adb wait-for-device
+    
+    # Waiting for emulator to fully boot
+    echo 'Waiting for emulator to fully boot... (This might take several minutes)'
+    adb shell 'while [ ""`getprop dev.bootcomplete` != "1" ] ; do sleep 1; done'
+    
+    # Run the tests
+    adb shell pm list instrumentation
+    adb install -rt <path to debug APK>
+    adb shell mkdir /storage/sdcard/report_dir
+    adb shell am instrument -w -e reportDir /storage/sdcard/report_dir <your package name>/com.zutubi.android.junitreport.JUnitReportTestRunner
+    adb pull /storage/sdcard/report_dir/junit-report.xml ./test-reports/junit-report.xml
+    
+    # Stop the emulator
+    adb -s emulator-5554 emu kill
 
 The test results are located within your docker file system at `/src/test-reports`. 
 Copy it back to your host file system via docker:
