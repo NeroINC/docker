@@ -11,6 +11,7 @@ The SonarQube platform is made of 3 components:
 3. One or more Analyzers to analyze projects.(sonar-runner)
 
 http://www.sonarqube.org/
+
 http://docs.sonarqube.org/display/SONAR/Documentation
 
 # Database
@@ -27,10 +28,10 @@ Default user and password for mysql is sonar:123qwe.
 # WebServer 
 
 ## Setup
-tpires/sonar-server is out of date, we rebuild it as neroinc/sonar-server, you can pull directly from docker hub or build with Dockerfile
-	'docker build -t "local/sonar-server" .'
+tpires/sonar-server is out of date, we rebuild it as neroinc/sonar-server, you can pull directly from docker hub or build with Dockerfile.
 
 Run web server and link it with the database. That link will be named "db".
+
 	`docker run -i -t -d --name sonar -p 9000:9000 --link smysql:db neroinc/sonar-server`
 
 ## Default user and password
@@ -42,6 +43,7 @@ You can now access to sonar-server by opening your browser to http://localhost:9
 
 ## Plugins
 All plugins locates at sonar-server/plugins/ are installed by default.
+
 Official Java and C# language is free, however offical C\C++ and Objective C langualge plugin is commercial licenses base(Not Free!), we added free communitiy plugin instead for now.
 
 ### C\C++ plugin
@@ -51,13 +53,17 @@ https://github.com/wenns/sonar-cxx
 https://github.com/octo-technology/sonar-objective-c
 
 # Sonar-Runner
-Download sonar-runner from http://www.sonarqube.org/downloads/, exatracted to $Sonar-Runner-Home.
-Repalce Sonar-Runner-Home\conf\sonar-runner.properties by sonar-runner\sonar-runner.properties
+Download sonar-runner from http://www.sonarqube.org/downloads/, extracted to $Sonar-Runner-Home.
+
+Repalce $Sonar-Runner-Home\conf\sonar-runner.properties by sonar-runner\sonar-runner.properties
+
 then ucommmented properties: sonar.host.url and onar.jdbc.url, properly configure localhost with your web server ip.
 
 # Analysis
 In the root of project $Project_Home, create and properly configure sonar-project.properties
+
 cd $Project_Home
+
 execute $Sonar-Runner-Home\bin\sonar-runner
 
 for BackItUp Clients, a basic sonar-project.properties has already created in their repositories(develop branch), simply check out and you are read to go.
