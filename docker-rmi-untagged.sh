@@ -1,2 +1,2 @@
 # Remove all untagged docker images
-docker rmi $(docker images -a | grep "^<none>" | awk '{print $3}')
+docker images -a | grep "^<none>" | awk '{print $3}' | xargs --no-run-if-empty docker rmi
