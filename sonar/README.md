@@ -17,22 +17,24 @@ http://docs.sonarqube.org/display/SONAR/Documentation
 # Database
 
 ## Setup 
-Run the database image tpires/sonar-mysql, Give it a name so it can be later linked with the sonar-server:
+Run the database image `neroinc/sonar-mysql`. It is directly based of `tpires/sonar-mysql`.
+Give it a name so it can be later linked with the sonar-server:
 
-	`docker run -i -t -d -p 3306:3306 --name smysql tpires/sonar-mysql`
+`docker run -i -t -d -p 3306:3306 --name smysql neroinc/sonar-mysql`
 
 ## Default user and password
 
 Default user and password for mysql is `sonar:123qwe`.
 
-# WebServer 
+# Web Server 
 
 ## Setup
-`tpires/sonar-server` is out of date, we rebuild it as `neroinc/sonar-server`, you can pull directly from docker hub or build with Dockerfile.
+`tpires/sonar-server` is out of date. Therefore we rebuild it as `neroinc/sonar-server`. 
+You can pull it directly from the docker hub or build manually with the Dockerfile.
 
 Run web server and link it with the database. That link will be named "db".
 
-	`docker run -i -t -d --name sonar -p 9000:9000 --link smysql:db neroinc/sonar-server`
+`docker run -i -t -d --name sonar -p 9000:9000 --link smysql:db neroinc/sonar-server`
 
 ## Default user and password
 
@@ -65,10 +67,4 @@ In the root of project `$Project_Home`, create and properly configure `sonar-pro
 `cd $Project_Home`
 
 execute `$Sonar-Runner-Home\bin\sonar-runner`
-
-for BackItUp Clients, a basic sonar-project.properties has already created in their repositories(develop branch), simply check out and you are read to go.
-
-
-
-
 
