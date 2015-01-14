@@ -53,11 +53,33 @@ Use at your own risk!
 All Dockerfiles are provided _"as is"_. Automated trusted builds of these images are available for public consumption 
 at the [Docker Hub](https://registry.hub.docker.com/repos/neroinc/).
 
-* `neroinc/fedore-apache` - Plain and simple image with Apache httpd based on fedora:20
+### Web Server
+Apache, Memcached, PHP, Node, etc.
+
+* `neroinc/fedora-apache` - Plain and simple image with Apache httpd based on fedora:20
 * `neroinc/fedora-apache-php` - Apache and PHP based on fedora:20
-* `neroinc/fedora-apache-php-phalcon1.2` - Apache, PHP and the Phalcon PHP Framework 1.2 (phalconphp.com) based on fedora:20
 * `neroinc/fedora-apache-php-phalcon` - Apache, PHP and the Phalcon PHP Framework 1.3 (phalconphp.com) based on fedora:20
-* `neroinc/fedora-golang` - Go runtime and sample web app based on fedora:20
+* `neroinc/fedora-apache-php-phalcon1.2` - Apache, PHP and the Phalcon PHP Framework 1.2 (phalconphp.com) based on fedora:20
 * `neroinc/fedora-memcached` - Installation of memcached based on fedora:20
 * `neroinc/fedora-node` - Node.js image based on fedora:20
+
+### Android Platform
+Android SDK and emulator
+
+* `neroinc/fedora-android` - Android build and test environment based on fedora:20
+
+### C/C++
+
+* `neroinc/ubuntu-crosscompile` - Base image for cross compilation based on ubuntu:utopic
+
+### Go/Golang
+Go (Programming Language)
+
+* `neroinc/fedora-golang` - Go runtime and sample web app based on fedora:20
 * `neroinc/ubuntu-golang-crosscompile` - Go runtime based on ubuntu:utopic, set up for cross compilation to Linux (i386, AMD64, ARM) and Windows (i386, AMD64).
+
+### SonarQube
+Source Quality Analysis and Management
+
+* `neroinc/sonar-mysql` SonarQube database setup
+* `neroinc/sonar-server` SonarQube server setup
