@@ -81,5 +81,10 @@ Go (Programming Language)
 ### SonarQube
 Source Quality Analysis and Management
 
-* `neroinc/sonar-mysql` SonarQube database setup
-* `neroinc/sonar-server` SonarQube server setup
+* `neroinc/sonar-mysql` - SonarQube database setup
+* `neroinc/sonar-server` - SonarQube server setup
+
+### Elkstack
+Elasticsearch, Logstash and Kibana
+
+* `neroinc/elkstack-elasticsearch` - Elasticsearch with Curator and additional plugins
