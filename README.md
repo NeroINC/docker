@@ -88,3 +88,4 @@ Source Quality Analysis and Management
 Elasticsearch, Logstash and Kibana
 
 * `neroinc/elkstack-elasticsearch` - Elasticsearch with Curator and additional plugins
+* `neroinc/elkstack-logstash` - Logstash with default config file
