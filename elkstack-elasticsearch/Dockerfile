@@ -9,3 +9,5 @@ RUN apt-get update -q \
 # Install additional plugins
 RUN /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-aws/2.5.1
+
+EXPOSE 9200 9300
