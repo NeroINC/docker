@@ -2,7 +2,7 @@
 
 set -e
 
-NETWORK_PUBLISH_HOST=${NETWORK_PUBLISH_HOST:-`/sbin/ip route|awk '/default/ { print $3 }'`}
+#NETWORK_PUBLISH_HOST=${NETWORK_PUBLISH_HOST:-`/sbin/ip route|awk '/default/ { print $3 }'`}
 
 # Add elasticsearch as command if needed
 if [ "${1:0:1}" = '-' ]; then
@@ -13,7 +13,8 @@ fi
 if [ "$1" = 'elasticsearch' ]; then
 	# Change the ownership of /usr/share/elasticsearch/data to elasticsearch
 	chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data
-	exec gosu elasticsearch "$@" -Des.network.publish_host=$NETWORK_PUBLISH_HOST
+	exec gosu elasticsearch "$@" 
+	#-Des.network.publish_host=$NETWORK_PUBLISH_HOST
 fi
 
 # As argument is not related to elasticsearch,
