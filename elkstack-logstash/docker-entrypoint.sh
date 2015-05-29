@@ -5,7 +5,7 @@ set -e
 # Wait for the Elasticsearch container to be ready before starting Logstash.
 # This is especially important if Logstash tries to upload its default template or tries to
 # push events to Elasticsearch while that is still registering itself in the cluster.
-if host elasticsearch >/dev/null; then
+if grep -q elasticsearch "/etc/hosts"; then
 	echo "Stalling for Elasticsearch"
 	while true; do
 		timeout 1 bash -c 'cat < /dev/null > /dev/tcp/elasticsearch/9200' 2>/dev/null && break
