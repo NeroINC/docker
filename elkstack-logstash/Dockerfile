@@ -1,4 +1,4 @@
-FROM logstash:1.5
+FROM logstash:1.4.2
 
 VOLUME /etc/logstash/conf.d
 
