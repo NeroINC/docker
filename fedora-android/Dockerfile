@@ -42,9 +42,9 @@ RUN echo y | /usr/local/android-sdk-linux/tools/android update sdk --filter sys-
 
 # Install Apache-Ant
 RUN cd /usr/local/ && \
-	curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist/ant/binaries/apache-ant-1.9.4-bin.tar.gz && \
-	tar xf apache-ant-1.9.4-bin.tar.gz && \
-	rm -rf apache-ant-1.9.4-bin.tar.gz
+	curl -L -O http://ftp.meisei-u.ac.jp/mirror/apache/dist/ant/binaries/apache-ant-1.9.5-bin.tar.gz && \
+	tar xf apache-ant-1.9.5-bin.tar.gz && \
+	rm -rf apache-ant-1.9.5-bin.tar.gz
 
 # Install Maven
 RUN cd /usr/local/ && \
