@@ -59,7 +59,7 @@ RUN cd /usr/local/ && \
 	rm -rf gradle-2.2.1-bin.zip
 
 # Environment variables
-ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk-1.7.0.71-2.5.3.3.fc20.x86_64
+ENV JAVA_HOME /usr/lib/jvm/jre-1.7.0-openjdk
 ENV ANDROID_HOME /usr/local/android-sdk-linux
 ENV ANDROID_AVD_HOME /root/.android/avd
 #ENV ANDROID_NDK_HOME /usr/local/android-ndk-r9b
