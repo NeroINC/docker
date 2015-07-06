@@ -11,7 +11,7 @@ RUN /usr/share/elasticsearch/bin/plugin -i lmenezes/elasticsearch-kopf
 RUN /usr/share/elasticsearch/bin/plugin -i elasticsearch/elasticsearch-cloud-aws/2.5.1
 
 # Use custom entrypoint shell script
-COPY docker-entrypoint.sh /
-RUN chmod +x /docker-entrypoint.sh
-
-EXPOSE 9200 9300
+COPY docker-entrypoint.sh /custom-entrypoint.sh
+RUN chmod +x /custom-entrypoint.sh
+ENTRYPOINT ["/custom-entrypoint.sh"]
+CMD ["elasticsearch"]

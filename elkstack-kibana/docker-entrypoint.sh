@@ -2,9 +2,9 @@
 
 set -e
 
-# Wait for the Elasticsearch container to be ready before starting Logstash.
-# This is especially important if Logstash tries to upload its default template or tries to
-# push events to Elasticsearch while that is still registering itself in the cluster.
+
+# Wait for the Elasticsearch container to be ready before starting Kibana 
+# (only if linked via Docker and thus running on the same machine).
 if grep -q elasticsearch "/etc/hosts"; then
 	echo "Stalling for Elasticsearch (2 minutes)"
 	while true; do
