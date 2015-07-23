@@ -1,4 +1,4 @@
-FROM logstash:1.5.2
+FROM logstash:1.5.3
 
 # Install additional plugins
 RUN /opt/logstash/bin/plugin install logstash-codec-cloudtrail
