@@ -1,4 +1,4 @@
-FROM elasticsearch:1.6
+FROM elasticsearch:1.7.1
 
 # Install Elasticsearch Curator
 RUN apt-get update -q \
