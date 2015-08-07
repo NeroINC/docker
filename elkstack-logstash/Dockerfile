@@ -6,7 +6,7 @@ RUN /opt/logstash/bin/plugin install logstash-codec-cloudfront
 RUN /opt/logstash/bin/plugin install logstash-input-cloudwatch
 
 # Temporary workaround for https://github.com/logstash-plugins/logstash-input-http/commit/c20c01c73bdf38f657b8dfbd6262840fba7e1cf1
-RUN sed -i '/require "puma\/minissl"/a require "base64"' /opt/logstash/vendor/bundle/jruby/1.9/gems/logstash-input-http-1.0.1/lib/logstash/inputs/http.rb
+RUN /opt/logstash/bin/plugin update logstash-input-http
 
 # Use custom entrypoint shell script
 COPY docker-entrypoint.sh /custom-entrypoint.sh
