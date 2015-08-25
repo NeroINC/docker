@@ -5,6 +5,7 @@ RUN /opt/logstash/bin/plugin update
 RUN /opt/logstash/bin/plugin install logstash-codec-cloudtrail
 RUN /opt/logstash/bin/plugin install logstash-codec-cloudfront
 RUN /opt/logstash/bin/plugin install logstash-input-cloudwatch
+RUN /opt/logstash/bin/plugin install logstash-filter-translate
 
 # Use custom entrypoint shell script
 COPY docker-entrypoint.sh /custom-entrypoint.sh
