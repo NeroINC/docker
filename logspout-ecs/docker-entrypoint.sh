@@ -2,6 +2,8 @@
 
 set -e
 
+set -- /bin/logspout "$@"
+
 # Use Amazon instance's hostname for logging
 export SYSLOG_HOSTNAME=`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
 
